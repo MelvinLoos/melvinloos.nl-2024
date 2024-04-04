@@ -5,14 +5,19 @@ import Chip from "../components/chip.astro";
 // Put all your links here
 const links: Link[] = [
   {
-    desc: "Amazon Wishlist",
+    desc: "Amazon",
     link: "www.amazon.nl/hz/wishlist/ls/ST08IYFYN56V?ref_=wl_share",
+    icon: "fa-solid fa-dice-d20",
+  },
+  {
+    desc: "Bol",
+    link: "www.bol.com/nl/nl/verlanglijstje/8e40bbee-2731-48df-b9f1-bdb2e2d67e38/?referrer=ENTEMA000000SNWL99",
     icon: "fa-solid fa-store",
   },
   {
-    desc: "Bol Wishlist",
-    link: "www.bol.com/nl/nl/verlanglijstje/8e40bbee-2731-48df-b9f1-bdb2e2d67e38/?referrer=ENTEMA000000SNWL99",
-    icon: "fa-solid fa-store",
+    desc: "HumbleBundle",
+    link: "https://www.humblebundle.com/store/wishlist/5442365879746560",
+    icon: "fa-solid fa-gamepad",
   },
 ];
 ---
@@ -54,6 +59,7 @@ const links: Link[] = [
     <main class='w-[80%] flex flex-col gap-8'>
       <h1 class='md:text-6xl text-4xl font-black text-center'>Melvin Loos</h1>
       <div class='grid justify-center gap-4'>
+        <h2 class='md:text-4xl text-2xl font-black text-center'>Wishlists</h2>
         {
           links.map(({ desc, link, icon }) => {
             return <Card {desc} {link} {icon} />;
